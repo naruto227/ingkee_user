@@ -18,7 +18,7 @@ router.get('/getUsers',function (req, res, next) {
     
 });
 router.post('/usercollection', function (req, res, next) {
-    console.log(JSON.stringify(req.body));
+    // console.log(JSON.stringify(req.body));//json传递过来，服务器端字符串接收
     var uid = req.body.uid,
         error_msg = req.body.error_msg,
         phone = req.body.phone,

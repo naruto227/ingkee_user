@@ -71,7 +71,7 @@ User.getUsers=function (num, callback) {
             //使用 count 返回特定查询的文档数 total
             collection.count(query, function (err, total) {
                 //根据 query 对象查询，并跳过前 (page-1)*10 个结果，返回之后的 10 个结果
-                collection.find(query, {
+                collection.find({'isused':0}, {
                     skip: 0,
                     limit: num
                 }).sort({
